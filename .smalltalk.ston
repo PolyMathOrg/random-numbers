@@ -1,0 +1,13 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'MathRandomNumbers',
+      #directory : 'src'
+    }
+  ],  
+  #testing : {
+    #coverage : {
+      #packages : [ 'Math-RandomNumbers*' ]
+    }
+}
+}
