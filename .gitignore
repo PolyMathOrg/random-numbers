@@ -1,23 +1,14 @@
 # changes file
 *.changes
-*.chg
 
 # system image
 *.image
-*.img7
-*.img
 
 # Pharo Smalltalk Debug log file
 PharoDebug.log
 
 # Squeak Smalltalk Debug log file
 SqueakDebug.log
-
-# Dolphin Smalltalk source file
-*.sml
-
-# Dolphin Smalltalk error file
-*.errors
 
 # Monticello package cache
 /package-cache
@@ -29,3 +20,5 @@ SqueakDebug.log
 # Metacello-github cache
 /github-cache
 github-*.zip
+
+**/.DS_STORE
