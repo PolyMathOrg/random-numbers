@@ -2,12 +2,13 @@
 A PMExponentialGeneratorTest is a test class for testing the behavior of PMExponentialGenerator
 "
 Class {
-	#name : #PMExponentialGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMExponentialGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMExponentialGeneratorTest >> testGenerator [
 	| eg |
 	eg := PMExponentialGenerator new.
@@ -19,7 +20,7 @@ PMExponentialGeneratorTest >> testGenerator [
 	self assert: (eg next isKindOf: Number)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMExponentialGeneratorTest >> testPeekIsIdempotent [
 	| eg |
 	eg := PMExponentialGenerator new.
@@ -27,7 +28,7 @@ PMExponentialGeneratorTest >> testPeekIsIdempotent [
 	self assert: eg peek equals: eg next
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMExponentialGeneratorTest >> testSampleMeanConvergesToExpectedValue [
 	"testing a random sample seems suspect. We use a 5% interval here"
 

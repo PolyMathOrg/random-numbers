@@ -1,10 +1,11 @@
 Class {
-	#name : #PMMersenneTwisterRandomTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMMersenneTwisterRandomTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMMersenneTwisterRandomTest >> testNext10BetweenZeroAndTen [
 	| g |
 	g := PMMersenneTwisterRandomGenerator new.
@@ -15,7 +16,7 @@ PMMersenneTwisterRandomTest >> testNext10BetweenZeroAndTen [
 			self assert: value < 10 ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMMersenneTwisterRandomTest >> testNextBetweenZeroAndOne [
 	| g |
 	g := PMMersenneTwisterRandomGenerator new.
@@ -24,7 +25,7 @@ PMMersenneTwisterRandomTest >> testNextBetweenZeroAndOne [
 			self assert: g next < 1 ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMMersenneTwisterRandomTest >> testNextFloatExcludeUpper [
 	"this revealed a bug in early versions, excludeUpper was producing between 0 and 2"
 

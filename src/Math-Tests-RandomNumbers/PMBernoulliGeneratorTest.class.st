@@ -2,12 +2,13 @@
 A BernoulliGeneratorTest is a test class for testing the behavior of BernoulliGenerator
 "
 Class {
-	#name : #PMBernoulliGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMBernoulliGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMBernoulliGeneratorTest >> testNextYieldsOneOrZero [
 	| gen |
 	gen := PMBernoulliGenerator fair.
@@ -15,14 +16,14 @@ PMBernoulliGeneratorTest >> testNextYieldsOneOrZero [
 				(x = 0) or: [x = 1]].
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMBernoulliGeneratorTest >> testOneProbabilityGivesOneNext [
 	| g |
 	g := PMBernoulliGenerator withProbability: 1.
 	self assert: g next equals: 1
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMBernoulliGeneratorTest >> testProbabilityIsMutable [
 	| g |
 	g := PMBernoulliGenerator withProbability: 0.0.
@@ -33,7 +34,7 @@ PMBernoulliGeneratorTest >> testProbabilityIsMutable [
 	self assert: g probability equals: 1
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMBernoulliGeneratorTest >> testZeroProbabilityGivesZeroNext [
 	| g |
 	g := PMBernoulliGenerator withProbability: 0.0.

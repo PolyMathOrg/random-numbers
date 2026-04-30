@@ -5,12 +5,13 @@ messages:
  - generateASampleOfSize: size usingGenerator:gen
 "
 Class {
-	#name : #PMRandomSample,
-	#superclass : #Object,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMRandomSample',
+	#superclass : 'Object',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMRandomSample class >> ofSize: size usingGenerator: gen [ 
 	"Generates sample data given a distribution"
 	| sample |

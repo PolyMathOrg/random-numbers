@@ -1,10 +1,11 @@
 Class {
-	#name : #PMBinomialGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMBinomialGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMBinomialGeneratorTest >> testBinomialGeneratorWithSuccessProbabilityOfOneAlwaysReturnNumberOfTrials [
 	| g numberOfTrials |
 	g := PMBinomialGenerator new.
@@ -20,7 +21,7 @@ PMBinomialGeneratorTest >> testBinomialGeneratorWithSuccessProbabilityOfOneAlway
 	self assert: g next equals: numberOfTrials
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMBinomialGeneratorTest >> testBinomialGeneratorWithSuccessProbabilityOfZeroAlwaysReturnZero [
 	| g numberOfTrials |
 	g := PMBinomialGenerator new.
@@ -36,13 +37,13 @@ PMBinomialGeneratorTest >> testBinomialGeneratorWithSuccessProbabilityOfZeroAlwa
 	self assert: g next equals: 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMBinomialGeneratorTest >> testSampleMeanConvergesToExpectedValue [
 	"Its purpose is to verify correct convergence of the binomial distribution, 
 	should be Normal (np, np(1-p))"
 
 	| gen sample probabilityOfSuccess numberOfTrials |
-	probabilityOfSuccess := (Random seed: 0.0) next sqrt.
+	probabilityOfSuccess := (Random seed: 0) next sqrt.
 	numberOfTrials := 1000.
 	gen := PMBinomialGenerator
 		numberOfTrials: numberOfTrials

@@ -1,10 +1,11 @@
 Class {
-	#name : #PMGaussianGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMGaussianGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 PMGaussianGeneratorTest >> assertSampleGeneratedBy: aGenerator convergesToExpectedValue: expectedValue andStandardDeviation: stdDeviation [
 	| sample |
 	sample := PMRandomSample ofSize: 10000 usingGenerator: aGenerator.
@@ -12,7 +13,7 @@ PMGaussianGeneratorTest >> assertSampleGeneratedBy: aGenerator convergesToExpect
 	self assert: (sample stdev - stdDeviation) abs <= 1
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMGaussianGeneratorTest >> testSampleMeanAndStandardDeviationConvergeToDistributionValues [
 	| mean standardDeviation g |
 	mean := 147.

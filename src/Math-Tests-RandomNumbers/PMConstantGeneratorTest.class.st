@@ -1,10 +1,11 @@
 Class {
-	#name : #PMConstantGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMConstantGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMConstantGeneratorTest >> testConstantGenerator [
 	| g |
 	g := PMConstantGenerator new.
