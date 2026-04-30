@@ -1,10 +1,11 @@
 Class {
-	#name : #PMNumberGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMNumberGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMNumberGeneratorTest >> testPeekIsIdempotent [
 	"every subclass should implement some basic behavior."
 

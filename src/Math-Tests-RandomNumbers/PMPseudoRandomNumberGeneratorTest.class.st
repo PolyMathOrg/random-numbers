@@ -1,10 +1,11 @@
 Class {
-	#name : #PMPseudoRandomNumberGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMPseudoRandomNumberGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 PMPseudoRandomNumberGeneratorTest >> pseudoRandomNumberGeneratorsDo: aBlock [
 	"Instanciates a pseudo random number generator 
 	to yield to the block"
@@ -16,13 +17,13 @@ PMPseudoRandomNumberGeneratorTest >> pseudoRandomNumberGeneratorsDo: aBlock [
 			aBlock value: generator ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamDoesntRespondToContents [
 	self
 		pseudoRandomNumberGeneratorsDo: [ :gen | self should: [ gen contents ] raise: Error ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamIsReadOnly [
 	self
 		pseudoRandomNumberGeneratorsDo: [ :gen | 
@@ -30,13 +31,13 @@ PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamIsReadOnly [
 			self assert: gen isReadable ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamNeverEnds [
 	self
 		pseudoRandomNumberGeneratorsDo: [ :gen | self shouldnt: [ gen atEnd ] ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamPeekIsNext [
 	self
 		pseudoRandomNumberGeneratorsDo: [ :gen | 
@@ -46,7 +47,7 @@ PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamPeekIsNext [
 			self assert: gen next equals: value ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamProducesNumbers [
 	self
 		pseudoRandomNumberGeneratorsDo: [ :gen | 
@@ -54,7 +55,7 @@ PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamProducesNumbers [
 			self assert: gen next isFloat ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamProducesRandomNumbers [
 	self
 		pseudoRandomNumberGeneratorsDo: [ :gen | 
@@ -63,7 +64,7 @@ PMPseudoRandomNumberGeneratorTest >> testGeneratorStreamProducesRandomNumbers [
 			self shouldnt: [ gen next = value ] ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPseudoRandomNumberGeneratorTest >> testNextGivesArrayOfNumbers [
 	self
 		pseudoRandomNumberGeneratorsDo: [ :gen | 

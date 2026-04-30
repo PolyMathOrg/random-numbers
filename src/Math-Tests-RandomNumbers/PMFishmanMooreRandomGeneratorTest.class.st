@@ -1,10 +1,11 @@
 Class {
-	#name : #PMFishmanMooreRandomGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMFishmanMooreRandomGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMFishmanMooreRandomGeneratorTest >> testNext [
 	| random expectedNumbers |
 	random := PMFishmanMooreRandomGenerator new.

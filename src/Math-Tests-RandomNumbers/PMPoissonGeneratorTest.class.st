@@ -1,24 +1,25 @@
 Class {
-	#name : #PMPoissonGeneratorTest,
-	#superclass : #TestCase,
-	#category : #'Math-Tests-RandomNumbers'
+	#name : 'PMPoissonGeneratorTest',
+	#superclass : 'TestCase',
+	#category : 'Math-Tests-RandomNumbers',
+	#package : 'Math-Tests-RandomNumbers'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPoissonGeneratorTest >> testPeekIsIdempotent [
 	| poisson |
 	poisson := PMPoissonGenerator lambda: 0.1.
 	self assert: poisson peek equals: poisson peek
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPoissonGeneratorTest >> testPeekReturnsSameAsNext [
 	| poisson |
 	poisson := PMPoissonGenerator lambda: 0.1.
 	self assert: poisson peek equals: poisson next
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPoissonGeneratorTest >> testPeekWorksAfterSampling [
 	| poisson random |
 	poisson := PMPoissonGenerator lambda: 0.1.
@@ -28,7 +29,7 @@ PMPoissonGeneratorTest >> testPeekWorksAfterSampling [
 	self assert: random equals: poisson next
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 PMPoissonGeneratorTest >> testSampleMeanConvergesToExpectedValue [
 	"law of large numbers"
 
